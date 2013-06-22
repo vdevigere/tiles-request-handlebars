@@ -7,6 +7,11 @@ import org.apache.tiles.request.ApplicationContext;
 public class HandlebarsTilesInitializer extends CompleteAutoloadTilesInitializer {
     private String prefix, suffix;
     
+    public HandlebarsTilesInitializer(String prefix, String suffix) {
+        this.prefix = prefix;
+        this.suffix = suffix;
+    }
+
     @Override
     protected AbstractTilesContainerFactory createContainerFactory(ApplicationContext context) {
         return new HandlebarsTilesContainerFactory(getPrefix(), getSuffix());
