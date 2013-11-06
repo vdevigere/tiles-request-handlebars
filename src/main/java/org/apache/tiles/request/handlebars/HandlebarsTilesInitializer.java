@@ -6,7 +6,12 @@ import org.apache.tiles.request.ApplicationContext;
 
 public class HandlebarsTilesInitializer extends CompleteAutoloadTilesInitializer {
     private String prefix, suffix;
-    
+
+    public HandlebarsTilesInitializer() {
+        this.prefix = "/hbr";
+        this.suffix = ".hbr";
+    }
+
     public HandlebarsTilesInitializer(String prefix, String suffix) {
         this.prefix = prefix;
         this.suffix = suffix;
